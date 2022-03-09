@@ -32,7 +32,7 @@ class ScatteringBase2D(ScatteringBase):
         self.unpad = self.backend.unpad
 
     def create_filters(self):
-        filters = filter_bank(self.M_padded, self.N_padded, self.J, self.L)
+        filters = filter_bank(self.M, self.N, self.J, self.L)
         self.phi, self.psi = filters['phi'], filters['psi']
 
     _doc_shape = 'M, N'
